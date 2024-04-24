@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sapce Lab (Get Quote)</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="get.css">
+</head>
+<body>
+
+    
+    <header class="header">
+        <nav>
+    
+          <div class="header__content">
+            <div class="header__logo-container">
+    
+              <div class="header__logo-img-cont">
+    <a href="./index.html">
+                <img src="ALIGNED-removebg-preview.png" alt="Logo Image" class="header__logo-img" />
+            </a>
+              </div>
+    
+    
+            </div>
+            <div class="header__main">
+    
+              <ul class="header__links">
+                <li class="header__link-wrapper">
+                  <a href="./index.html" class="header__link"> Home </a>
+                </li>
+                <li class="header__link-wrapper">
+                  <a href="./index.html#contact" class="header__link"> Product</a>
+                </li>
+    
+    
+                <li class="header__link-wrapper">
+                  <a href="./index.html#projects" class="header__link">
+                    Services
+                  </a>
+                 
+                </li>
+                <li class="header__link-wrapper">
+                  <a href="./index.html#about" class="header__link">About Us</a>
+                </li>
+                <li class="header__link-wrapper">
+                  <button class="rectangular-button" style="background-color: rgb(225, 40, 23); "> <a
+                      href="./get.html" class="header__link"> Get Quote </a> </button>
+                </li>
+    
+                <li class="header__link-wrapper">
+                  <a href="./index.html#contact" class="header__link">Contact Us</a>
+                </li>
+              </ul>
+              <div class="header__main-ham-menu-cont">
+                <img src="https://img.icons8.com/?size=48&id=i1FWOfm4pfIO&format=png" alt="hamburger menu"
+                  class="header__main-ham-menu" />
+                <img src="https://img.icons8.com/?size=48&id=i1FWOfm4pfIO&format=png" alt="hamburger menu close"
+                  class="header__main-ham-menu-close d-none" />
+              </div>
+            </div>
+          </div>
+          <div class="header__sm-menu">
+            <div class="header__sm-menu-content">
+              <ul class="header__sm-menu-links">
+                <li class="header__sm-menu-link">
+                  <a href="./index.html"> Home </a>
+                </li>
+    
+                <li class="header__sm-menu-link">
+                  <a href="./index.html#about">Product</a>
+                </li>
+    
+                <li class="header__sm-menu-link">
+                  <a href="./index.html#">Services</a>
+                  
+                </li>
+    
+                <li class="header__sm-menu-link">
+                  <a href="./index.html#contact"> About Us </a>
+                </li>
+                <li class="header__sm-menu-link">
+                  <a href="./get.html"> Get Quote </a>
+                </li>
+                <li class="header__sm-menu-link">
+                  <a href="./index.html#contact">Contact Us </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+<div class="hero-">
+    <img src="1.jpg" alt="" class="back-img-">
+    <div class="content-" style="text-align: center;">
+      <h1 style="text-align: center;"> Get Quote </h1>
+        </div>
+  </div>
+  <div class="form-box">
+    <div class="textline" >
+          
+      <div class="text"> <h1>Get Quote for Manufacturing</h1></div>
+      <div class="line"></div>
+     
+  </div>
+  <p >Please fill the form below and we shall get back to you within 2 – 4 hours</p>
+ 
+
+  <form id="quoteForm" onsubmit="return validateForm()">
+    <div class="form-group">
+
+      <label for="fileInput">Add File(s):</label>
+      <div class="f-box">
+        <h3>Drag & Drop Files Here</h3>
+      <input type="file" id="fileInput" name="files[]" multiple >
+    </div>
+    </div>
+    <div class="form-group">
+      <label for="emailInput">Email:</label>
+      <input type="email" id="emailInput" name="emailInput" required>
+    </div>
+    <div class="form-group">
+      <label for="phoneInput">Phone Number:</label>
+      <input type="tel" id="phoneInput" name="phoneInput" required>
+    </div>
+    <div class="form-group">
+      <label for="technologySelect">Choose Technology:</label>
+      <select id="technologySelect" name="technologySelect" onchange="showSubTechnologies()" required>
+        <option value="">Select Technology</option>
+        <option value="Web">Web</option>
+        <option value="Mobile">Mobile</option>
+        <option value="AI">Artificial Intelligence</option>
+      </select>
+    </div>
+    <div class="form-group" id="subTechnologies" style="display: none;">
+      <label for="subTechnologySelect">Choose Sub-Technology:</label>
+      <select id="subTechnologySelect" name="subTechnologySelect">
+        <!-- Sub-technology options will be added dynamically using JavaScript -->
+      </select>
+    </div>
+    
+    <div class="wrapper">
+    <div class="form-group">
+      <label for="firstNameInput">First Name:</label>
+      <input type="text" id="firstNameInput" name="firstNameInput" required>
+    </div>
+    <div class="form-group">
+      <label for="lastNameInput">Last Name:</label>
+      <input type="text" id="lastNameInput" name="lastNameInput" required>
+    </div>
+    <div class="form-group">
+      <label for="addressInput">Shipping Address:</label>
+      <input type="text" id="addressInput" name="addressInput" required>
+    </div>
+    <div class="form-group">
+      <label for="cityInput">City:</label>
+      <input type="text" id="cityInput" name="cityInput" required>
+    </div>
+    <div class="form-group">
+      <label for="stateInput">State:</label>
+      <input type="text" id="stateInput" name="stateInput" required>
+    </div>
+    <div class="form-group">
+      <label for="zipInput">ZIP Code:</label>
+      <input type="text" id="zipInput" name="zipInput" required>
+    </div>
+    <div class="form-group">
+      <label for="countrySelect">Country:</label>
+      <select id="countrySelect" name="countrySelect" required>
+        <option value="">Select Country</option>
+        <!-- Country options can be added here -->
+      </select>
+    </div>
+  </div>
+    <button type="submit" class="btn-get">Submit</button>
+  </form>
+
+</div>
+  <br> <br> <br>   <hr style="color:  black ; border: solid #04043694;"> 
+  <footer class="main-footer">
+          <div class="main-container">
+            <div class="main-footer__upper">
+              <div class="main-footer__row main-footer__row-2">
+                <h2 class="heading heading-sm text-lt">Space Lab</h2>
+                <div class="underline"></div>
+                <p class="main-footer__short-desc">
+                  SPACELAB: Where cutting-edge  CNC and  3D printing technology breathe life into your ideas. Specializing in both desktop and industrial machinery, we're your partners in precision, from concept to creation
+                </span>
+                </p>
+                <div class="ftbt">
+                   <a href="#" class="ft-btn">Read More</a>    
+                  </div>       
+                  </div>
+  
+              <div class="main-footer__row main-footer__row-2">
+                <h2 class="heading heading-sm text-lt">Quick Links</h2>
+                <div class="underline"></div>
+                <ul >
+                  <li>Home</li>
+                   <li>Product</li>
+                   <li>Services</li>
+                   <li>About Us</li>
+                   <li>Get Quote</li>
+                   <li>Contact Us</li>
+                </ul>
+              </div>
+        
+        
+              <div class="main-footer__row main-footer__row-1" style="margin-left: 5px; margin-top: 18px;">
+                <h2 class="heading heading-sm main-footer__heading-sm">
+                  <span style="margin-left: 5px; ">Follow Us</span>
+                  <div class="underline"></div>
+                </h2>
+                <div class="main-footer__social-cont">
+                  <a target="_blank" rel="noreferrer" href="https://wa.me/qr/4UOUKWQXH5N5F1">
+                    <img
+                      class="main-footer__icon"
+                      src="https://img.icons8.com/?size=48&id=16713&format=png"
+                      alt="icon"
+                    />
+                  </a>
+                  <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/prince-monga-/">
+                    <img
+                      class="main-footer__icon"
+                 
+                      src="https://img.icons8.com/?size=48&id=13930&format=png"
+                      alt="icon"
+                    />
+                  </a>
+                  
+                  <a target="_blank" rel="noreferrer" href="#">
+                    <img
+                      class="main-footer__icon"
+                      src="https://img.icons8.com/?size=48&id=13963&format=png"
+                      alt="icon"
+                    />
+                  </a>
+                  <a target="_blank" rel="noreferrer" href="https://www.instagram.com/prince_arora1309?igsh=MXh5enVhaWNsOTNhbQ==">
+                    <img
+                      class="main-footer__icon main-footer__icon--mr-none"
+                      src="https://img.icons8.com/?size=48&id=32323&format=png"
+                      alt="icon"
+                    />
+                  </a>
+                </div>
+              </div>
+              
+            </div>
+        
+            <!-- If you give me some credit or shoutout here by linking to my website, then it will be a big thing for me and will help me a lot :) -->
+            <div class="main-footer__lower">
+              &copy; Copyright 2024. 
+              
+            </div>
+          </div>
+        </footer>
+
+
+
+<script src="script.js"></script>
+<script src="get.js"></script>
+</body>
+</html>
